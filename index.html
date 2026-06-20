@@ -1,149 +1,391 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pusat Studi Inovasi Teknologi</title>
-
-    <!-- Menghubungkan file CSS eksternal -->
-    <style>
-        /* Mengatur semua elemen */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Mengatur body */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-}
-
-/* Header */
-header {
-    background-color: #005f77;
-    color: white;
-    text-align: center;
-    padding: 20px;
-}
-
-/* Navigasi */
-nav {
-    background-color: #00a2c6;
-    padding: 15px;
-}
-
-/* List navigasi */
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-/* Link navigasi */
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-/* Container main dan aside */
-.container {
-    display: flex;
-    margin: 20px;
-    gap: 20px;
-}
-
-/* Main */
-main {
-    width: 70%;
-    background-color: white;
-    padding: 20px;
-    border-radius: 5px;
-}
-
-/* Aside */
-aside {
-    width: 30%;
-    background-color: white;
-    padding: 20px;
-    border-radius: 5px;
-}
-
-/* Judul aside */
-aside h3 {
-    margin-bottom: 10px;
-}
-
-/* List aside */
-aside ul {
-    padding-left: 20px;
-}
-
-/* Footer */
-footer {
-    background-color: #005f77;
-    color: white;
-    text-align: center;
-    padding: 15px;
-    margin-top: 20px;
-}
-
-    </style>
+<head> <!--Berisi tentang informasi website yg bisa dilihat langsung oleh pengguna-->
+<meta charset="UTF-8"> <!--Digunakan agar huruf & simbol dapat tampil dengan benar-->
+<!--Bagian meta ini untuk supaya website bisa menyesuaikan dengan ukuran laya hp, tablet, laptop & komputer-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hello English - Learn English, Speak Confidently</title>
+<!--Ini merupakan judul yg akan muncul di tab browser-->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<!--bagian link ini merupakan bootstrap yaitu framework CSS yang dapat membantu membuat tampilan website lebih menarik dan juga responsif-->
+<link rel="stylesheet" href="style.css"> 
+<!--bagian link rel ini adalah untuk menghubungkan file CSS dengan html untuk mengatur warna, ukuran, dan desain website-->
 </head>
-<body>
+<body> <!--Semua yang terlihat oleh pengguna dalam website itu berada di dalam body-->
 
-    <!-- Bagian Header -->
-    <header>
-        <h1>PUSAT STUDI INOVASI TEKNOLOGI</h1>
-        <p>Fakultas Tarbiyah dan Keguruan</p>
-    </header>
+<!-- Navbar -->
+<nav class="navbar"> <!--Navbar ini merupakan menu navigasi website-->
+  <div class="logo"> <!--Berfungsi untuk menampilkan Gambar Pengajar, seperti nama Hello English -->
+    <div class="logo-icon bg-green" style="background-color: #2563eb; border-radius: 8px; width: 40px; height: 4opx; display: flex; align-items: center; justify-content: center;">
+      <img src="stiker-teacher.png" alt="pdf icon" widht="32" height="32"> <!--Ini untuk menampilakn gambar logo website-->
+    </div>
+    <div>
+      <div>HELLO ENGLISH</div>
+      <small style="font-weight: 400; font-size: 12px;">Learn English, Speak Confidently</small>
+    </div>
+  </div>
+  
+<!--Ini merupakan menu navigasi dalam website-->
+  <div class="nav-menu">
+    <a onclick="showSection('home')" class="nav-link active">Home</a>
+    <a onclick="showSection('courses')" class="nav-link">Courses</a>
+    <a onclick="showSection('materials')" class="nav-link">Materials</a>
+    <a onclick="showSection('quiz')" class="nav-link">Quiz</a>
+    <a onclick="showSection('tutors')" class="nav-link">Tutors</a>
+    <a onclick="showSection('testimonials')" class="nav-link">Testimonials</a>
+    <a onclick="showSection('contact')" class="nav-link">Contact</a>
+  </div>
+  
+<!--Berpindah ke halaman Login & Pendaftaran--> 
+  <button class="login-btn" onclick="window.location.href='login.html'">Login</button>
+</nav>
 
-    <!-- Bagian Navigasi -->
-    <nav>
-        <ul>
-            <li><a href="#">Beranda</a></li>
-            <li><a href="#">Profil</a></li>
-            <li><a href="#">Kontak</a></li>
-        </ul>
-    </nav>
+<!-- HOME SECTION -->
+<!--Bagian utama yg akan menarik perhatian pengguna website-->
+<section id="home" class="page-section active">
+  <div class="hero">
+    <div class="hero-text">
+      <div class="badge">Belajar Bahasa Inggris</div> <!--Label kecil yg berada di atas judul -->
+      <h1>HELLO <span>ENGLISH</span></h1> <!--Menampilkan nama website dengan ukuran yg besar. Span untuk supaya inline elemenya tidak buat garis baru-->
+      <p>Belajar bahasa Inggris dari dasar hingga percaya diri berbicara dengan metode yang mudah dipahami dan menyenangkan.</p>
 
-    <!-- Container untuk main dan aside -->
-    <div class="container">
+<!--Bagian ini akan mengarahkan pengguna untuk melihat demo pembelajaran-->      
+      <div class="btn-group">
+        <button class="btn-primary" onclick="window.location.href='login.html'">Ayo Mulai →</button>
+        <button class="btn-secondary" onclick="window.location.href='login.html'">▶ Lihat Demo</button>
+      </div>
 
-        <!-- Konten utama -->
-        <main>
-            <article>
-                <h2>Visi & Misi</h2>
-
-                <p>
-                    Menjadi pusat studi yang unggul dalam pengembangan
-                    teknologi pembelajaran di era digital.
-                </p>
-
-                <p>
-                    Kami berfokus pada riset berbasis Outcome-Based Education.
-                </p>
-            </article>
-        </main>
-
-        <!-- Sidebar -->
-        <aside>
-            <h3>Pengumuman</h3>
-
-            <ul>
-                <li>Pendaftaran Asisten</li>
-                <li>Jadwal Pelatihan</li>
-            </ul>
-        </aside>
-
+<!--Menampilkan keunggulan website-->
+      <div class="features">
+        <div class="feature-item">✓ Materi Lengkap & Terstruktur</div>
+        <div class="feature-item">✓ Quiz Interaktif & Latihan Soal</div>
+        <div class="feature-item">✓ Belajar Fleksibel Kapan Saja & Dimana Saja</div>
+      </div>
     </div>
 
-    <!-- Footer -->
-    <footer>
-        <p>Copyright &copy; 2026 - Pusat Studi Inovasi Teknologi</p>
-    </footer>
+<!--Menampilkan gambar utama yg mendukung tampilan website-->
+    <div class="hero-img">
+      <div style="background: #dbeafe; padding: 15px; border-radius: 20px;">
+        <img src="slide4.jpg" alt="Foto Hero" style="width: 700px;  border-radius: 10px;">
+      </div>
+    </div>
+  </div>
+
+<!--Bagian yg menampilkan keterampilan utama dalam bahasa Inggris-->
+  <div class="container">
+    <h2 class="section-title">Language Skills</h2>
+    <div class="grid-4">
+      <div class="card">
+        <div class="card-icon bg-blue">📖</div>
+        <h3>Reading</h3>
+        <p>Meningkatkan kemampuan membaca dan memahami berbagai jenis teks.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon bg-green">🎧</div>
+        <h3>Listening</h3>
+        <p>Melatih kemampuan mendengarkan dan memahami percakapan sehari-hari.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon bg-yellow">✏️</div>
+        <h3>Writing</h3>
+        <p>Belajar menulis dengan struktur kalimat yang benar dan efektif.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon bg-red">💬</div>
+        <h3>Speaking</h3>
+        <p>Melatih kemampuan berbicara agar lebih percaya diri dan lancar.</p>
+   
+<!--Komponen yg mendukung bahasa Inggris-->
+      </div>
+    </div>
+    <h2 class="section-title" style="margin-top: 80px;">Language Components</h2>
+    <div class="grid-4">
+      <div class="card">
+        <div class="card-icon bg-blue">📝</div>
+        <h3>Grammar</h3>
+        <p>Memahami aturan tata bahasa agar dapat membuat kalimat dengan benar.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon bg-green">📚</div>
+        <h3>Vocabulary</h3>
+        <p>Memperkaya kosakata untuk memahami dan berkomunikasi lebih baik.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon bg-purple">🔊</div>
+        <h3>Pronunciation</h3>
+        <p>Melatih pelafalan agar lebih tepat dan mudah dipahami.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon bg-yellow">ABC</div>
+        <h3>Spelling</h3>
+        <p>Belajar ejaan kata dengan benar agar tulisan lebih akurat.</p>
+      </div>
+    </div>
+  </div>
+
+<!--Slideshow gambar Otomatis-->
+  <div id="carouselExampleControlsNoTouching" 
+  class="carousel slide"
+  data-bs-ride="carousel"
+  data-bs-interval="5000">
+<div class="carousel-inner"> <!--Menampung semua gambar yg berisi Carousel-item -->
+
+<!--Slide 1-->
+    <div class="carousel-item active">
+      <img src="slide1.jpg" class="d-block w-100" alt="Slide 1">
+
+    <div class="carousel-caption d-none d-md-block">
+      <h2>Learn English Easily</h2>
+    <p>Belajar bahasa Inggris lebih mudah dan menyenangkan</p>
+  </div>
+</div>
+
+<!--Slide 2-->
+ <div class="carousel-item">
+      <img src="slide2.jpg" class="d-block w-100" alt="Slide 2">
+       <div class="carousel-caption d-none d-md-block">
+        <h2>Practice Everyday</h2>
+        <p>Latihan speaking dan listening</p>
+      </div>
+    </div>
+ 
+<!--Slide 3-->    
+    <div class="carousel-item">
+      <img src="slide3.jpg" class="d-block w-100" alt="Slide 3">
+       <div class="carousel-caption d-none d-md-block">
+        <h2>Speak Confidently</h2>
+        <p>Tingkatkan rasa percaya dirimu</p>
+      </div>
+    </div>
+  </div>
+
+<!--Tombol Prev--> 
+<!-- Begian ini adalah supaya bisa balikin (mundur) slide gambar ke gabar sebelumnya di caraousel-->
+  <button class="carousel-control-prev" type="button" 
+  data-bs-target="#carouselExampleControlsNoTouching" 
+  data-bs-slide="prev">
+  <span class="carousel-control-prev-icon"></span>
+  </button>
+
+<!--Tombol Next-->
+<!-- Bagian ini adalah kebalikan dari tombol prev tadi (Maju) dari satu gambar ke gambar berikutnya -->
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</div>
+
+<!-- bagian ini untuk mengajak user atau pengguna daftar setelah liat slide website -->
+  <div class="cta">
+    <div>
+      <h2>Siap meningkatkan kemampuan bahasa Inggrismu?</h2>
+      <p>Bergabung sekarang dan mulai perjalananmu bersama Hello English!</p>
+    </div>
+    <button class="cta-btn">Gabung Sekarang → </button>
+  </div> 
+</section>
+
+<!-- COURSES SECTION -->
+<!--Bagianini berisi Program kursus yg tersedia di dalam website Bahasa Inggris -->
+<section id="courses" class="page-section">
+  <div class="container">
+    <h2 class="section-title">Semua Kursus Bahasa Inggris</h2>
+    <div class="grid-4">
+      <div class="card">
+        <div class="card-icon bg-blue">1</div>
+        <h3>English for Beginner</h3>
+        <p>8 Minggu | Level Pemula</p>
+        <button class="btn-primary" style="margin-top: 15px;" onclick="window.location.href='login.html'">Daftar Sekarang</button>
+      </div>
+      <div class="card">
+        <div class="card-icon bg-green">2</div>
+        <h3>Business English</h3>
+        <p>6 Minggu | Level Menengah</p>
+        <button class="btn-primary" style="margin-top: 15px;" onclick="window.location.href='login.html'">Daftar Sekarang</button>
+      </div>
+      <div class="card">
+        <div class="card-icon bg-yellow">3</div>
+        <h3>IELTS Preparation</h3>
+        <p>12 Minggu | Level Mahir</p>
+        <button class="btn-primary" style="margin-top: 15px;" onclick="window.location.href='login.html'">Daftar Sekarang</button>
+      </div>
+      <div class="card">
+        <div class="card-icon bg-red">4</div>
+        <h3>Conversation Class</h3>
+        <p>4 Minggu | Semua Level</p>
+        <button class="btn-primary" style="margin-top: 15px;" onclick="window.location.href='login.html'">Daftar Sekarang</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MATERIALS SECTION -->
+<!-- Bagian Materials menyediakan berbagai sumber belajar yang dapat digunakan oleh pengguna -->
+<section id="materials" class="page-section">
+  <div class="container">
+    <h2 class="section-title">Materi Pembelajaran</h2>
+    <div class="grid-4">
+      <div class="card">
+        <div class="card-icon bg-green">▶</div>
+        <h3>Video Lessons</h3>
+        <p>200+ video pembelajaran dengan penjelasan mudah dipahami</p>
+      </div>
+      <div class="card">
+        <div class="card-icon bg-green">📝</div>
+        <h3>Practice Exercises</h3>
+        <p>1000+ soal latihan untuk mengasah kemampuanmu</p>
+      </div>
+      <div class="card">
+        <div class="card-icon bg-green">
+          <img src="stiker.pdf.png" alt="PDF Icon">
+        </div>
+        <h3>Downloadable PDF</h3>
+        <p>Materi bisa diunduh dan dipelajari offline</p>
+      </div>
+      <div class="card">
+        <div class="card-icon bg-green">
+           <img src="stiker-live.png" alt="PDF Icon">
+        </div>
+        <h3>Live Sessions</h3>
+        <p>Sesi live bersama tutor disetiap minggu</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- QUIZ SECTION -->
+<!-- Bagian Quiz berisi Placement Test yang digunakan untuk mengukur kemampuan bahasa Inggris pengguna -->
+<section id="quiz" class="page-section">
+  <div class="container">
+    <h2 style="text-align: center; margin-bottom: 40px;">Cari Tahu Level Bahasa Inggrismu</h2>
+
+    <div class="card" style="max-width: 600px; margin: 0 auto;">
+      <div class="card-icon bg-green">📚</div>
+      <h3>Quiz Placement Test</h3>
+      <p style="margin: 20px 0;">Jawab 20 pertanyaan untuk mengetahui level bahasa Inggris kamu</p>
+      <button class="btn-primary" style="display: block; margin: 0 auto;">Mulai Quiz</button>
+    </div>
+  </div>
+</section>
+
+<!-- TUTORS SECTION -->
+<!-- Bagian Tutors ini memperkenalkan para tutor yang mengajar di Hello English -->
+<section id="tutors" class="page-section">
+  <div class="container">
+    <h2 class="section-title">Kenali Tutor Kami</h2>
+    <div class="grid-4">
+      <div class="card">
+        <div style="font-size: 60px; margin-bottom: 10px;">👨‍🏫</div>
+        <h3>John Smith</h3>
+        <p>8+ Tahun Pengalaman</p>
+        <p>Native Speaker dari USA</p>
+      </div>
+      <div class="card">
+        <div style="font-size: 60px; margin-bottom: 10px;">👩‍🏫</div>
+        <h3>Sarah Johnson</h3>
+        <p>5+ Tahun Pengalaman</p>
+        <p>Spesialis Business English</p>
+      </div>
+      <div class="card">
+        <div style="font-size: 60px; margin-bottom: 10px;">👨‍🏫</div>
+        <h3>David Lee</h3>
+        <p>10+ Tahun Pengalaman</p>
+        <p>IELTS Expert</p>
+      </div>
+      <div class="card">
+        <div style="font-size: 60px; margin-bottom: 10px;">👩‍🏫</div>
+        <h3>Lisa Wong</h3>
+        <p>6+ Tahun Pengalaman</p>
+        <p>Conversation Specialist</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS SECTION -->
+<!-- Bagian testimonials berisi ulasan dan pengalaman peserta yang pernah mengikuti kursus Bahasa inggris --> 
+<section id="testimonials" class="page-section">
+  <div class="container">
+    <h2 class="section-title">Apa Kata Mereka?</h2>
+    <div class="card" style="max-width: 700px; margin: 0 auto;">
+      <div class="card-icon bg-green">📚</div>
+      <div style="font-size: 40px;">⭐⭐⭐⭐⭐</div>
+      <p style="font-size: 18px; margin: 20px 0; font-style: italic;">
+        "Metodenya mudah dipahami dan seru! Sekarang saya lebih percaya diri berbicara bahasa Inggris"
+      </p>
+      <p><strong>- Nini, Student</strong></p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<!-- Bagian Contact menyediakan digunakan pengguna untuk menghubungi pihak/team Hello English untuk informasi yg lebih lanjut -->
+<section id="contact" class="page-section">
+  <div class="container">
+    <h2 class="section-title">Contact Us</h2>
+    <div class="grid-4">
+      <div class="card">
+        <h3>📞 Phone</h3>
+        <p>+62 812-3456-7890</p>
+      </div>
+      <div class="card">
+        <h3>✉️ Email</h3>
+        <p>helloenglish@gmail.com</p>
+      </div>
+      <div class="card">
+        <h3>📍 Location</h3>
+        <p>Jakarta, Indonesia</p>
+      </div>
+      <div class="card">
+        <h3>🕒 Hours</h3>
+        <p>09:00 - 21:00 WIB</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<!--Ringkasan tentang Hello English, Menu navigasi tambahan, Informasi perusahaan, Kontak yang dapat dihubungi,Footer berfungsi sebagai penutup halaman sekaligus menyediakan akses cepat ke informasi penting-->
+<footer>
+  <div class="footer-content">
+    <div>
+      <h4>HELLO ENGLISH</h4>
+      <p>Belajar bahasa Inggris dengan cara yang mudah, menyenangkan, dan efektif.</p>
+    </div>
+    <div>
+      <h4>Menu</h4>
+      <ul>
+        <li><a onclick="showSection('home')">Home</a></li>
+        <li><a onclick="showSection('courses')">Courses</a></li>
+        <li><a onclick="showSection('materials')">Materials</a></li>
+        <li><a onclick="showSection('quiz')">Quiz</a></li>
+        <li><a onclick="showSection('tutors')">Tutors</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Company</h4>
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact Us</h4>
+      <ul>
+        <li>📞 +62 812-3456-7890</li>
+        <li>✉️ helloenglish@gmail.com</li>
+        <li>📍 Jakarta, Indonesia</li>
+      </ul>
+    </div>
+  </div>
+  <div class="copyright">
+    © 2024 Hello English. All rights reserved.
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>

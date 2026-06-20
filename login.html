@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en"> <!--menunjukkan bahwa bahasa utama halaman adalah bahasa Inggris-->
+  <head> <!--berisi informasi dan pengaturan website yang tidak langsung terlihat oleh pengguna-->
+    <meta charset="UTF-8" /> <!--Digunakan agar semua karakter dapat ditampilkan dengan benar-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!--Membuat tampilan website menjadi responsif sehingga dapat menyesuaikan ukuran layar hp, laptop, tablet & komputer -->
+    <title>Login - Hello English</title> <!--Menampilkan judul halaman pada tab browser-->
+    <link rel="stylesheet" href="login.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    /> <!--Mengambil library ikon Boxicons dari internet. Library ini digunakan untuk menampilkan ikon-->
+  </head>
+  <body>
+    <div class="container"> <!--Container adalah bagian utama yang menampung seluruh isi halaman login dan daftar-->
+      <div class="form-box login"> <!--Membuat area khusus untuk pengguna yang sudah memiliki akun-->
+        <form action="#"> <!--Membuat from login. Tanda # artinya data belum dikirim ke database atau server-->
+          <h1>Login</h1>
+          <div class="input-box"> <!--Menyediakan kolom untuk memasukkan username-->
+            <input type="text" placeholder="Username" required />
+            <i class="bx bxs-user"></i>
+          </div>
+
+          <div class="input-box">
+            <input type="password" placeholder="Password" required />  <!--Membuat kolom password jadi ketika ngetik karakter akan tersembunyi demi keamanan-->
+            <i class="bx bxs-lock-alt"></i> <!--Menampilkan ikon kunci/gembok-->
+          </div>
+
+          <div class="forgot-link"> <!--Digunakan ketika pengguna lupa password-->
+            <a href="#">Forgot Password?</a>
+          </div>
+
+          <!--Memberitahu browser bahwa tombol ini digunakan untuk mengirim formulir user -->
+          <button type="submit" class="btn">Login</button>
+          <p>or login with social platforms</p> <!--Memberikan alternatif login menggunakan akun media sosial-->
+          <div class="social-icons">
+            <a href="#"><i class="bx bxl-google"></i></a>
+            <a href="#"><i class="bx bxl-instagram"></i></a>
+            <a href="#"><i class="bx bxl-github"></i></a>
+            <a href="#"><i class="bx bxl-linkedin"></i></a>
+          </div>
+        </form>
+      </div>
+
+      <!--Membuat formulir pendaftaran akun baru-->
+      <div class="form-box register">
+        <form action="#">
+          <h1>register</h1>
+          <div class="input-box">
+            <input type="text" placeholder="Username" required />
+            <i class="bx bxs-user"></i>
+          </div>
+          <div class="input-box">
+            <input type="email" placeholder="Email" required />
+            <i class="bx bxs-envelope"></i>
+          </div>
+          <div class="input-box">
+            <input type="password" placeholder="Password" required />
+            <i class="bx bxs-lock-alt"></i>
+          </div>
+          <button type="submit" class="btn">register</button>
+          <p>or register with social platforms</p>
+          <div class="social-icons">
+            <a href="#"><i class="bx bxl-google"></i></a>
+            <a href="#"><i class="bx bxl-instagram"></i></a>
+            <a href="#"><i class="bx bxl-github"></i></a>
+            <a href="#"><i class="bx bxl-linkedin"></i></a>
+          </div>
+        </form>
+      </div>
+
+      <div class="toggle-box">
+        <div class="toggle-panel toggle-left"> <!--Panel yang akan muncul saat pengguna berada di halaman Login-->
+          <h1>Hello, Welcome!</h1>
+          <p>Don't have an account?</p>
+          <button class="btn register-btn">register</button>
+        </div>
+
+        <div class="toggle-panel toggle-right">
+          <h1>Welcome Back!</h1>
+          <p>Already have an account?</p>
+          <button class="btn login-btn">Login</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="login.js"></script>
+  </body>
+</html>
